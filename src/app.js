@@ -36,9 +36,17 @@ function currentDate() {
 
 function cityWeather(response) {
   document.querySelector(".city").innerHTML = response.data.name;
-  document.querySelector(".degrees").innerHTML = Math.round(response.data.main.temp);
-  document.querySelector(".humidity").innerHTML = `Humidity: ${response.data.main.humidity}%`;
-  document.querySelector(".wind").innerHTML = `Wind: ${Math.round(response.data.wind.speed)} km/h`;
+  document.querySelector(".degrees").innerHTML = Math.round(
+    response.data.main.temp
+  );
+  document.querySelector(".description").innerHTML =
+    response.data.weather[0].description;
+  document.querySelector(
+    ".humidity"
+  ).innerHTML = `Humidity: ${response.data.main.humidity}%`;
+  document.querySelector(".wind").innerHTML = `Wind: ${Math.round(
+    response.data.wind.speed
+  )} km/h`;
 }
 
 function displayCity(cityName) {
