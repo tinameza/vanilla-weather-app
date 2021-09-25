@@ -27,8 +27,14 @@ function currentDate() {
   let day = days[currentTime.getDay()];
 
   let hour = currentTime.getHours();
+  if (hour < 10) {
+    hour = `0${hour}`;
+  }
 
   let minutes = currentTime.getMinutes();
+  if (minutes < 10) {
+    hour = `0${minutes}`;
+  }
 
   let fullDate = document.querySelector(".date");
   fullDate.innerHTML = `${day}, ${month} ${date} (${hour}:${minutes})`;
