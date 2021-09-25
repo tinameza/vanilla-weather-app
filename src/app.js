@@ -57,7 +57,9 @@ function cityWeather(response) {
   )} km/h`;
 }
 
-function displayCity(cityName) {
+function search(cityName) {
+  let apiKey = "7762efb07698ed321bcc404f01844d19";
+  let units = "metric";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=${units}&appid=${apiKey}`;
   axios.get(apiUrl).then(cityWeather);
 }
@@ -66,10 +68,9 @@ function searchCity(event) {
   event.preventDefault();
   let city = document.querySelector(".form-control");
   let cityName = city.value;
-
   let displayCitySearch = document.querySelector(".city");
   displayCitySearch.innerHTML = cityName;
-  displayCity(cityName);
+  search(cityName);
 }
 
 function showCurrentCelsius(response) {
@@ -83,7 +84,8 @@ function showCurrentCelsius(response) {
 function retrievePosition(position) {
   let lat = position.coords.latitude;
   let lon = position.coords.longitude;
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=${units}&appid=${apiKey}`;
+  let apiKey = "7762efb07698ed321bcc404f01844d19";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}`;
 
   axios.get(apiUrl).then(showCurrentCelsius);
   axios.get(apiUrl).then(cityWeather);
@@ -95,11 +97,10 @@ function currentPosition() {
 
 currentDate();
 
-let apiKey = "7762efb07698ed321bcc404f01844d19";
-let units = "metric";
-
 let currentButton = document.querySelector("#current");
 currentButton.addEventListener("click", currentPosition);
 
 let searchForm = document.querySelector(".search-city-form");
 searchForm.addEventListener("submit", searchCity);
+
+search("Ljubljana");
