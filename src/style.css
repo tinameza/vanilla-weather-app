@@ -1,0 +1,130 @@
+body{
+    color: white;
+    font-family: "Roboto Condensed", sans-serif;
+}
+
+h1.city {
+    text-align: right;
+    text-transform: capitalize;
+    font-size: 80px;
+    margin: 0px auto;
+    font-weight: 400;
+}
+
+hr {
+    color: whitesmoke;
+}
+
+footer{
+    font-size: 12px;
+    text-align: center;
+    padding: 10px;
+    color: rgb(177, 177, 177);
+}
+
+a{
+    color: rgb(177, 177, 177);
+    transition: all 200ms ease-in-out;
+}
+
+a:hover {
+    cursor: pointer;
+    color: grey;
+}
+li {
+    list-style-type: none;
+}
+
+.app {
+    background: linear-gradient(68.1deg,
+    rgb(226, 198, 198) -0.3%,
+    rgb(166, 182, 212) 100.7%);
+    max-width: 500px;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    text-align: right;
+}
+
+.button {
+    background: white;
+    border: 1px solid #ced4da;
+    border-radius: 00.25rem;
+    color: grey;
+}
+
+.main-icon{
+    font-size: 160px;
+    margin: 0 auto;
+    line-height: 1;
+}
+
+.degrees {
+    color: white;
+    font-size: 80px;
+    font-weight: 200;
+    margin: 10px auto;
+}
+
+.date {
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.568);
+  position: relative;
+  margin-top: 20px;
+}
+
+.celsius,
+.fahrenheit {
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.295);
+  transition: all 200ms ease-in-out;
+}
+
+.celsius:hover,
+.fahrenheit:hover {
+  cursor: pointer;
+  color: white;
+}
+
+.pipe {
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.295);
+}
+
+.humidity,
+.wind {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.39);
+  position: relative;
+}
+
+.weather-card {
+  text-align: center;
+  font-size: 16px;
+  margin-left: auto;
+  margin-right: auto;
+  color: white;
+}
+.week-day {
+  text-transform: uppercase;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.685);
+}
+.weather-icon {
+  font-size: 30px;
+}
+
+.afternoon-temp {
+  font-weight: 400;
+}
+
+.morning-temp {
+  color: rgba(255, 255, 255, 0.562);
+}
+
+.my-name {
+  font-weight: 700;
+}
