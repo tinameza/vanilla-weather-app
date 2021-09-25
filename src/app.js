@@ -10,6 +10,7 @@ function currentDate() {
     "June",
     "July",
     "August",
+    "September",
     "October",
     "November",
     "December",
@@ -24,6 +25,7 @@ function currentDate() {
     "Friday",
     "Saturday",
   ];
+
   let day = days[currentTime.getDay()];
 
   let hour = currentTime.getHours();
@@ -33,7 +35,7 @@ function currentDate() {
 
   let minutes = currentTime.getMinutes();
   if (minutes < 10) {
-    hour = `0${minutes}`;
+    minutes = `0${minutes}`;
   }
 
   let fullDate = document.querySelector(".date");
