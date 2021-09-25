@@ -56,9 +56,11 @@
             </div>
             <div class="col-6">
               <span class="degrees"></span>
-              <span class="celsius">°C</span>
-              <span class="pipe"> | </span>
-              <span class="fahrenheit">°F</span>
+              <span class="units">
+                <a href="#" class="active unit" id="celsius-link">°C</a>
+                <span class="pipe"> | </span>
+                <a href="#" class="unit" id="fahrenheit-link">°F</a>
+              </span>
               <div class="row">
                 <ul>
                   <li class="description"></li>
@@ -135,11 +137,16 @@
       </div>
       <footer>
         <span class="my-name">
-          <a href="">Open-source code</a>
+          <a href="" id="Github" class="footer">Open-source code</a>
         </span>
         by
         <span class="my-name">
-          <a href="https://www.linkedin.com/in/tinameza/">Tina Meža</a>
+          <a
+            href="https://www.linkedin.com/in/tinameza/"
+            id="linkedin"
+            class="footer"
+            >Tina Meža</a
+          >
         </span>
       </footer>
     </div>

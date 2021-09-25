@@ -22,12 +22,15 @@ footer {
   color: rgb(177, 177, 177);
 }
 
-a {
+#Github,
+#linkedin {
+  font-size: 12px;
   color: rgb(177, 177, 177);
   transition: all 200ms ease-in-out;
 }
 
-a:hover {
+#Github:hover,
+#linkedin:hover {
   cursor: pointer;
   color: grey;
 }
@@ -78,16 +81,30 @@ li {
   margin-top: 20px;
 }
 
-.celsius,
-.fahrenheit {
+.units {
   font-size: 20px;
   color: rgba(255, 255, 255, 0.295);
+}
+
+a {
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.295);
+  text-decoration: none;
   transition: all 200ms ease-in-out;
 }
 
-.celsius:hover,
-.fahrenheit:hover {
-  cursor: pointer;
+a:hover {
+  color: white;
+}
+
+.active {
+  color: white;
+  cursor: default;
+  text-decoration: none;
+}
+
+.units .active:hover {
+  text-decoration: none;
   color: white;
 }
 

@@ -44,9 +44,8 @@ function currentDate() {
 
 function cityWeather(response) {
   document.querySelector(".city").innerHTML = response.data.name;
-  document.querySelector(".degrees").innerHTML = Math.round(
-    response.data.main.temp
-  );
+  celsius = response.data.main.temp;
+  document.querySelector(".degrees").innerHTML = Math.round(celsius);
   document.querySelector(".description").innerHTML =
     response.data.weather[0].description;
   document.querySelector(
@@ -81,6 +80,23 @@ function showCurrentCelsius(response) {
   celsiusTemp.innerHTML = celsiusTemperature;
 }
 
+function displayFahrenheit(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector(".degrees");
+  celsiusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
+  let fahrenheitTemp = (celsius * 9) / 5 + 32;
+  temperatureElement.innerHTML = Math.round(fahrenheitTemp);
+}
+
+function displayCelsius(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector(".degrees");
+  celsiusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
+  temperatureElement.innerHTML = Math.round(celsius);
+}
+
 function retrievePosition(position) {
   let lat = position.coords.latitude;
   let lon = position.coords.longitude;
@@ -97,10 +113,18 @@ function currentPosition() {
 
 currentDate();
 
+let celsius = null;
+
 let currentButton = document.querySelector("#current");
 currentButton.addEventListener("click", currentPosition);
 
 let searchForm = document.querySelector(".search-city-form");
 searchForm.addEventListener("submit", searchCity);
+
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", displayFahrenheit);
+
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", displayCelsius);
 
 search("Ljubljana");
