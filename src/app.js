@@ -84,6 +84,7 @@ function retrievePosition(position) {
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=${units}&appid=${apiKey}`;
 
   axios.get(apiUrl).then(showCurrentCelsius);
+  axios.get(apiUrl).then(cityWeather);
 }
 
 function currentPosition() {
