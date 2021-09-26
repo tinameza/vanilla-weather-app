@@ -151,3 +151,8 @@ a:hover {
 .my-name {
   font-weight: 700;
 }
+
+.icons {
+  color: lightgrey;
+  font-size: 8px;
+}
