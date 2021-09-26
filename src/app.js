@@ -151,7 +151,7 @@ function displayForecast(response) {
             <img
               src="src/images/${forecastDay.weather[0].icon}.png"
               alt=""
-              width="35"
+              width="30"
             />
           </div>
           <span class="afternoon-temp" id="max-temp">${Math.round(

@@ -41,10 +41,11 @@ li {
 
 .app {
   background: linear-gradient(
-    68.1deg,
-    rgb(226, 198, 198) -0.3%,
-    rgb(166, 182, 212) 100.7%
+    20deg,
+    rgba(206, 172, 167, 1) 0%,
+    rgba(129, 125, 165, 1) 100%
   );
+
   max-width: 500px;
   margin-top: 40px;
   margin-left: auto;
@@ -56,7 +57,7 @@ li {
 }
 
 .button {
-  background: white;
+  background: #fbfbfb;
   border: 1px solid #ced4da;
   border-radius: 00.25rem;
   color: grey;
@@ -67,7 +68,7 @@ li {
 }
 
 .degrees {
-  color: white;
+  color: fbfbfb;
   font-size: 80px;
   font-weight: 200;
   margin: 10px auto;
@@ -75,48 +76,48 @@ li {
 
 .date {
   font-size: 16px;
-  color: rgba(255, 255, 255, 0.568);
+  color: rgba(255, 255, 255, 0.75);
   position: relative;
   margin-top: 10px;
 }
 
 .units {
   font-size: 20px;
-  color: rgba(255, 255, 255, 0.295);
+  color: rgba(255, 255, 255, 0.3);
 }
 
 a {
   font-size: 20px;
-  color: rgba(255, 255, 255, 0.295);
+  color: rgba(255, 255, 255, 0.3);
   text-decoration: none;
   transition: all 200ms ease-in-out;
 }
 
 a:hover {
-  color: white;
+  color: #fbfbfb;
 }
 
 .active {
-  color: white;
+  color: fbfbfb;
   cursor: default;
   text-decoration: none;
 }
 
 .units .active:hover {
   text-decoration: none;
-  color: white;
+  color: #fbfbfb;
 }
 
 .pipe {
   font-size: 20px;
-  color: rgba(255, 255, 255, 0.295);
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .description,
 .humidity,
 .wind {
   font-size: 16px;
-  color: rgba(255, 255, 255, 0.39);
+  color: rgba(255, 255, 255, 0.6);
   position: relative;
 }
 
@@ -129,15 +130,16 @@ a:hover {
   font-size: 16px;
   margin-left: auto;
   margin-right: auto;
-  color: white;
+  color: #fbfbfb;
 }
 .week-day {
   text-transform: uppercase;
   font-weight: 300;
-  color: rgba(255, 255, 255, 0.685);
+  color: rgba(255, 255, 255, 0.7);
 }
 .weather-icon {
   font-size: 30px;
+  margin: 10px;
 }
 
 .afternoon-temp {
@@ -145,7 +147,7 @@ a:hover {
 }
 
 .morning-temp {
-  color: rgba(255, 255, 255, 0.562);
+  color: rgba(255, 255, 255, 0.6);
 }
 
 .my-name {
