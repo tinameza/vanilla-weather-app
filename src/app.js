@@ -39,7 +39,7 @@ function currentDate() {
   }
 
   let fullDate = document.querySelector(".date");
-  fullDate.innerHTML = `${day}, ${month} ${date} (${hour}:${minutes})`;
+  fullDate.innerHTML = `${day}, ${month} ${date} | ${hour}:${minutes}`;
 }
 
 function cityWeather(response) {
@@ -57,7 +57,7 @@ function cityWeather(response) {
   let iconElement = document.querySelector("#icon");
   iconElement.setAttribute(
     "src",
-    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+    `src/images/${response.data.weather[0].icon}.png`
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
 
@@ -149,15 +149,17 @@ function displayForecast(response) {
           <div class="week-day">${formatDay(forecastDay.dt)}</div>
           <div class="weather-icon">
             <img
-              src="http://openweathermap.org/img/wn/${
-                forecastDay.weather[0].icon
-              }@2x.png"
+              src="src/images/${forecastDay.weather[0].icon}.png"
               alt=""
-              width="42"
+              width="35"
             />
           </div>
-          <div class="afternoon-temp">${Math.round(forecastDay.temp.max)}°</div>
-          <div class="morning-temp">${Math.round(forecastDay.temp.min)}°</div>
+          <span class="afternoon-temp" id="max-temp">${Math.round(
+            forecastDay.temp.max
+          )} |</span>
+          <span class="morning-temp" id="min-temp">${Math.round(
+            forecastDay.temp.min
+          )}</span>
         </div>
       </div>`;
     }
