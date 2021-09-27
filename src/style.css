@@ -139,15 +139,18 @@ a:hover {
 }
 .weather-icon {
   font-size: 30px;
-  margin: 10px;
+  margin-bottom: 10px;
+  margin-top: 10px;
 }
 
 .afternoon-temp {
   font-weight: 400;
+  font-size: 13px;
 }
 
 .morning-temp {
   color: rgba(255, 255, 255, 0.6);
+  font-size: 13px;
 }
 
 .my-name {
