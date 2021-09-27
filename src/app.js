@@ -78,6 +78,7 @@ function searchCity(event) {
   let displayCitySearch = document.querySelector(".city");
   displayCitySearch.innerHTML = cityName;
   search(cityName);
+  displayCelsius(event);
 }
 
 function showCurrentCelsius(response) {
@@ -117,6 +118,7 @@ function retrievePosition(position) {
 
 function currentPosition() {
   navigator.geolocation.getCurrentPosition(retrievePosition);
+  displayCelsius(event);
 }
 
 function getForecast(coordinates) {
